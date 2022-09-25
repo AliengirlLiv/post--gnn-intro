@@ -42,15 +42,15 @@
 // var graph_description_1 = require("./visualizations/graph-description");
 // var table_1 = require("./visualizations/table");
 // var graph_description_embeddings_1 = require("./visualizations/graph-description-embeddings");
-import * as d3 from 'd3';
-import * as d3_jp from 'd3-jetpack';
+// import * as d3 from 'd3';
+// import * as d3_jp from 'd3-jetpack';
 
-d3.keys(d3_jp).forEach(key => {
-  try {
-    d3[key] = d3_jp[key];
-  } catch (e) {
-  }
-});
+// d3.keys(d3_jp).forEach(key => {
+//   try {
+//     d3[key] = d3_jp[key];
+//   } catch (e) {
+//   }
+// });
 import {graphLevel} from './visualizations/graph-level';
 import {graphToTensor} from './visualizations/graph-to-tensor';
 import {imageAsGraph} from './visualizations/image-as-graph';
