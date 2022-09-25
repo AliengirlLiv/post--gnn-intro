@@ -465,7 +465,7 @@ A perfect model would visibility separate labeled data, but since we are reducin
 <figure>
 <div id="ArchitectureNDim"></div>
 <script type="text/javascript">
-  var spec = "ArchitectureNDim.json";
+  var spec = "data/ArchitectureNDim.json";
   vegaEmbed('#ArchitectureNDim', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -478,7 +478,7 @@ A perfect model would visibility separate labeled data, but since we are reducin
 <figure>
 <div id="ArchitectureNLayers"></div>
 <script type="text/javascript">
-  var spec = "ArchitectureNLayers.json";
+  var spec = "data/ArchitectureNLayers.json";
   vegaEmbed('#ArchitectureNLayers', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -492,7 +492,7 @@ A perfect model would visibility separate labeled data, but since we are reducin
 <figure>
 <div id="ArchitectureAggregation"></div>
 <script type="text/javascript">
-  var spec = "ArchitectureAggregation.json";
+  var spec = "data/ArchitectureAggregation.json";
   vegaEmbed('#ArchitectureAggregation', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -504,7 +504,7 @@ A perfect model would visibility separate labeled data, but since we are reducin
 <p>The previous explorations have given mixed messages. We can find mean trends where more complexity gives better performance but we can find clear counterexamples where models with fewer parameters, number of layers, or dimensionality perform better. One trend that is much clearer is about the number of attributes that are passing information to each other.</p>
 <p>Here we break down performance based on the style of message passing. On both extremes, we consider models that do not communicate between graph entities (“none”) and models that have messaging passed between nodes, edges, and globals.</p>
 <figure>
-<div id="ArchitectureMessagePassing"></div>
+<div id="data/ArchitectureMessagePassing"></div>
 <script type="text/javascript">
   var spec = "ArchitectureMessagePassing.json";
   vegaEmbed('#ArchitectureMessagePassing', spec).then(function(result) {
