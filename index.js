@@ -16,46 +16,74 @@
  * =============================================================================
  */
 // exports.__esModule = true;
-var d3 = require("d3");
-var d3_jp = require("d3-jetpack");
-d3.keys(d3_jp).forEach(function (key) {
-    try {
-        d3[key] = d3_jp[key];
-    }
-    catch (e) {
-    }
+// import _d3 from 'd3'
+// var d3 = require("d3");
+// var d3_jp = require("d3-jetpack");
+// d3.keys(d3_jp).forEach(function (key) {
+//     try {
+//         d3[key] = d3_jp[key];
+//     }
+//     catch (e) {
+//     }
+// });
+// var graph_level_1 = require("./visualizations/graph-level");
+// var graph_to_tensor_1 = require("./visualizations/graph-to-tensor");
+// var image_as_graph_1 = require("./visualizations/image-as-graph");
+// var layerwise_trace_1 = require("./visualizations/layerwise_trace");
+// var mols_as_graph_1 = require("./visualizations/mols-as-graph");
+// var node_level_1 = require("./visualizations/node-level");
+// var pca_layers_1 = require("./visualizations/pca-layers");
+// var node_step_1 = require("./visualizations/node-step");
+// var node_step_small_1 = require("./visualizations/node-step-small");
+// var shuffle_sm_1 = require("./visualizations/shuffle-sm");
+// var pooling_table_1 = require("./visualizations/pooling-table");
+// var text_as_graph_1 = require("./visualizations/text-as-graph");
+// var index_1 = require("./visualizations/playground/index");
+// var graph_description_1 = require("./visualizations/graph-description");
+// var table_1 = require("./visualizations/table");
+// var graph_description_embeddings_1 = require("./visualizations/graph-description-embeddings");
+import * as d3 from 'd3';
+import * as d3_jp from 'd3-jetpack';
+
+d3.keys(d3_jp).forEach(key => {
+  try {
+    d3[key] = d3_jp[key];
+  } catch (e) {
+  }
 });
-var graph_level_1 = require("./visualizations/graph-level");
-var graph_to_tensor_1 = require("./visualizations/graph-to-tensor");
-var image_as_graph_1 = require("./visualizations/image-as-graph");
-var layerwise_trace_1 = require("./visualizations/layerwise_trace");
-var mols_as_graph_1 = require("./visualizations/mols-as-graph");
-var node_level_1 = require("./visualizations/node-level");
-var pca_layers_1 = require("./visualizations/pca-layers");
-var node_step_1 = require("./visualizations/node-step");
-var node_step_small_1 = require("./visualizations/node-step-small");
-var shuffle_sm_1 = require("./visualizations/shuffle-sm");
-var pooling_table_1 = require("./visualizations/pooling-table");
-var text_as_graph_1 = require("./visualizations/text-as-graph");
-var index_1 = require("./visualizations/playground/index");
-var graph_description_1 = require("./visualizations/graph-description");
-var table_1 = require("./visualizations/table");
-var graph_description_embeddings_1 = require("./visualizations/graph-description-embeddings");
+import {graphLevel} from './visualizations/graph-level';
+import {graphToTensor} from './visualizations/graph-to-tensor';
+import {imageAsGraph} from './visualizations/image-as-graph';
+import {LayerwiseTrace} from './visualizations/layerwise_trace';
+import {XsAsGraphs} from './visualizations/mols-as-graph';
+import {nodeLevel} from './visualizations/node-level';
+import {pcaLayers} from './visualizations/pca-layers';
+import {nodeStep} from './visualizations/node-step';
+import {nodeStepSmall} from './visualizations/node-step-small';
+import {shuffleSm} from './visualizations/shuffle-sm';
+import {poolingTable} from './visualizations/pooling-table';
+import {TextAsGraph} from './visualizations/text-as-graph';
+import {Playground} from './visualizations/playground/index';
+import { GraphDescription } from './visualizations/graph-description';
+import { Table } from './visualizations/table';
+import { GraphDescriptionEmbeddings } from './visualizations/graph-description-embeddings';
+
+
 window.onload = function () {
-    (0, pca_layers_1.pcaLayers)();
-    (0, node_step_small_1.nodeStepSmall)();
-    (0, pooling_table_1.poolingTable)();
-    (0, node_level_1.nodeLevel)();
-    (0, graph_level_1.graphLevel)();
-    (0, graph_to_tensor_1.graphToTensor)();
-    (0, node_step_1.nodeStep)();
-    (0, shuffle_sm_1.shuffleSm)();
-    new layerwise_trace_1.LayerwiseTrace();
-    new text_as_graph_1.TextAsGraph();
-    new mols_as_graph_1.XsAsGraphs();
-    new index_1.Playground();
-    new graph_description_1.GraphDescription();
-    new graph_description_embeddings_1.GraphDescriptionEmbeddings();
-    (0, image_as_graph_1.imageAsGraph)();
-    new table_1.Table();
+    (0, pcaLayers)();
+    (0, nodeStepSmall)();
+    (0, poolingTable)();
+    (0, nodeLevel)();
+    (0, graphLevel)();
+    (0, graphToTensor)();
+    (0, nodeStep)();
+    (0, shuffleSm)();
+    new LayerwiseTrace();
+    new TextAsGraph();
+    new XsAsGraphs();
+    new Playground();
+    new GraphDescription();
+    new GraphDescriptionEmbeddings();
+    (0, imageAsGraph)();
+    new Table();
 };
