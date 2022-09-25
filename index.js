@@ -15,7 +15,7 @@
  * limitations under the License.
  * =============================================================================
  */
-exports.__esModule = true;
+// exports.__esModule = true;
 var d3 = require("d3");
 var d3_jp = require("d3-jetpack");
 d3.keys(d3_jp).forEach(function (key) {
