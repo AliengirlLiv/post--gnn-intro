@@ -203,7 +203,7 @@ export class TextAsGraph {
           fill: d => (d.i === j && j === i - 1) ? blueDark : blue,
         }
         );
-      }
+      })
 }
 
 function calcCharWidth() {
